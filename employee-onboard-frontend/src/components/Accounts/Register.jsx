@@ -13,8 +13,6 @@ const RegisterForm = () => {
     password: '',
     first_name: '',
     last_name: '',
-    is_student: false,
-    is_teacher: false,
   });
 
   const handleChange = (e) => {
@@ -95,37 +93,6 @@ const RegisterForm = () => {
             onChange={handleChange}
             className="border-2 border-gray-400 rounded w-full px-3 py-2 focus:outline-none focus:border-blue-500"
           />
-        </div>
-        <div className="mb-4 flex gap-3">
-          <label className="block text-gray-700 font-bold mb-2">
-            Register as:
-          </label>
-          <div className="flex items-center">
-            <input
-              id="student"
-              type="checkbox"
-              name="isStudent"
-              checked={formData.is_student}
-              onChange={handleChange}
-              className="mr-2 leading-tight"
-            />
-            <label htmlFor="student" className="text-sm">
-              Student
-            </label>
-          </div>
-          <div className="flex items-center">
-            <input
-              id="teacher"
-              type="checkbox"
-              name="isTeacher"
-              checked={formData.is_teacher}
-              onChange={handleChange}
-              className="mr-2 leading-tight"
-            />
-            <label htmlFor="teacher" className="text-sm">
-              Teacher
-            </label>
-          </div>
         </div>
         <div className="mb-4">
           <label htmlFor="password" className="block text-gray-700 font-bold mb-2">
