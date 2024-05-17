@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const RegisterForm = () => {
   const navigate = useNavigate();
-  const [error,setError]=useState(false);
+  const [error, setError] = useState(false);
 
   const [formData, setFormData] = useState({
     username: '',
@@ -32,81 +32,83 @@ const RegisterForm = () => {
   };
 
   return (
-    <div className="max-w-sm mx-auto mt-8">
+    <div className="max-w-md mx-auto mt-8">
       {error ? 'Registration failed! Try Again' : ''}
       <form onSubmit={handleSubmit} className="bg-white rounded px-8 pt-6 pb-8 mb-4">
         <div className="text-center text-blue-500 mb-4 underline font-medium">
           <Link to="/login">Existing User? Login</Link>
         </div>
-        <div className="mb-4">
-          <label htmlFor="first_name" className="block text-gray-700 font-bold mb-2">
-            First Name:
-          </label>
-          <input
-            id="first_name"
-            type="text"
-            name="first_name"
-            placeholder="First Name"
-            value={formData.first_name}
-            onChange={handleChange}
-            className="border-2 border-gray-400 rounded w-full px-3 py-2 focus:outline-none focus:border-blue-500"
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="last_name" className="block text-gray-700 font-bold mb-2">
-            Last Name:
-          </label>
-          <input
-            id="last_name"
-            type="text"
-            name="last_name"
-            placeholder="Last Name"
-            value={formData.last_name}
-            onChange={handleChange}
-            className="border-2 border-gray-400 rounded w-full px-3 py-2 focus:outline-none focus:border-blue-500"
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="username" className="block text-gray-700 font-bold mb-2">
-            Username:
-          </label>
-          <input
-            id="username"
-            type="text"
-            name="username"
-            placeholder="Username"
-            value={formData.username}
-            onChange={handleChange}
-            className="border-2 border-gray-400 rounded w-full px-3 py-2 focus:outline-none focus:border-blue-500"
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="email" className="block text-gray-700 font-bold mb-2">
-            Email:
-          </label>
-          <input
-            id="email"
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={formData.email}
-            onChange={handleChange}
-            className="border-2 border-gray-400 rounded w-full px-3 py-2 focus:outline-none focus:border-blue-500"
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="password" className="block text-gray-700 font-bold mb-2">
-            Password:
-          </label>
-          <input
-            id="password"
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={formData.password}
-            onChange={handleChange}
-            className="border-2 border-gray-400 rounded w-full px-3 py-2 focus:outline-none focus:border-blue-500"
-          />
+        <div className="grid grid-cols-2 gap-4">
+          <div className="mb-4">
+            <label htmlFor="first_name" className="block text-gray-700 font-bold mb-2">
+              First Name:
+            </label>
+            <input
+              id="first_name"
+              type="text"
+              name="first_name"
+              placeholder="First Name"
+              value={formData.first_name}
+              onChange={handleChange}
+              className="border-2 border-gray-400 rounded w-full px-3 py-2 focus:outline-none focus:border-blue-500"
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="last_name" className="block text-gray-700 font-bold mb-2">
+              Last Name:
+            </label>
+            <input
+              id="last_name"
+              type="text"
+              name="last_name"
+              placeholder="Last Name"
+              value={formData.last_name}
+              onChange={handleChange}
+              className="border-2 border-gray-400 rounded w-full px-3 py-2 focus:outline-none focus:border-blue-500"
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="username" className="block text-gray-700 font-bold mb-2">
+              Username:
+            </label>
+            <input
+              id="username"
+              type="text"
+              name="username"
+              placeholder="Username"
+              value={formData.username}
+              onChange={handleChange}
+              className="border-2 border-gray-400 rounded w-full px-3 py-2 focus:outline-none focus:border-blue-500"
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="email" className="block text-gray-700 font-bold mb-2">
+              Email:
+            </label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formData.email}
+              onChange={handleChange}
+              className="border-2 border-gray-400 rounded w-full px-3 py-2 focus:outline-none focus:border-blue-500"
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="password" className="block text-gray-700 font-bold mb-2">
+              Password:
+            </label>
+            <input
+              id="password"
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={formData.password}
+              onChange={handleChange}
+              className="border-2 border-gray-400 rounded w-full px-3 py-2 focus:outline-none focus:border-blue-500"
+            />
+          </div>
         </div>
         <button
           type="submit"
