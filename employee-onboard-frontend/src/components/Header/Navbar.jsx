@@ -5,7 +5,7 @@ function Navbar() {
     return (
         <div className=' h-screen border-r flex justify-evenly items-center flex-col w-3/12 bg-slate-600 text-white text-xl'>
             <div>
-                Home
+                <Link to={'/'}>Home</Link>
             </div>
             <div>
                 OnBoardings

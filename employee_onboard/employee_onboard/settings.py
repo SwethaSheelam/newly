@@ -154,9 +154,9 @@ WSGI_APPLICATION = 'employee_onboard.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME':'employee_onboard',
+        'NAME':'employee',
         'USER': 'root',      
-        'PASSWORD': 'system',
+        'PASSWORD': 'W@2915djkq#',
         'HOST': 'localhost',
     }
 }
